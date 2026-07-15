@@ -34,8 +34,8 @@ export function Hero() {
       <div className="absolute inset-0 bg-linear-to-b from-ink/80 via-ink/40 to-ink/80 md:bg-linear-to-r md:from-ink/85 md:via-ink/40 md:to-transparent" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 pt-36 pb-24 lg:px-10">
-        <div className="max-w-xl lg:max-w-3xl">
-          <h1 className="text-4xl leading-[1.12] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <div className="max-w-xl lg:max-w-2xl">
+          <h1 className="text-3xl leading-[1.15] font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Contabilidade estratégica para empresas que buscam{" "}
             <span className="text-gold-500">
               segurança, organização e crescimento.

@@ -1,17 +1,27 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  MobileNav,
+  MobileNavHeader,
+  MobileNavMenu,
+  MobileNavToggle,
+  Navbar,
+  NavBody,
+  NavItems,
+} from "@/components/ui/resizable-navbar";
 
 const NAV_LINKS = [
-  { label: "Início", href: "#inicio" },
-  { label: "Quem Somos", href: "#quem-somos" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Conteúdo", href: "#conteudo" },
-  { label: "Contato", href: "#contato" },
+  { name: "Início", link: "#inicio" },
+  { name: "Quem Somos", link: "#quem-somos" },
+  { name: "Serviços", link: "#servicos" },
+  { name: "Diferenciais", link: "#diferenciais" },
+  { name: "Conteúdo", link: "#conteudo" },
+  { name: "Contato", link: "#contato" },
 ] as const;
 
 function BrandLockup() {
   return (
-    <a href="#inicio" className="flex flex-col leading-none">
+    <a href="#inicio" className="relative z-20 flex flex-col leading-none">
       <span className="text-lg font-bold tracking-[0.22em] text-white">
         PÁDUA
       </span>
@@ -26,30 +36,43 @@ function BrandLockup() {
 }
 
 export function SiteHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between gap-8 px-6 lg:px-10">
+    <Navbar>
+      <NavBody>
         <BrandLockup />
-
-        <nav
-          aria-label="Navegação principal"
-          className="hidden items-center gap-7 lg:flex"
-        >
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-xs font-medium tracking-[0.16em] text-white/75 uppercase transition-colors hover:text-gold-300"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <Button className="hidden h-11 px-6 text-xs font-semibold tracking-[0.14em] uppercase lg:inline-flex">
+        <NavItems items={NAV_LINKS} />
+        <Button className="relative z-20 h-10 px-5 text-xs font-semibold tracking-[0.14em] uppercase">
           Solicitar Orçamento
         </Button>
-      </div>
-    </header>
+      </NavBody>
+
+      <MobileNav>
+        <MobileNavHeader className="px-4">
+          <BrandLockup />
+          <MobileNavToggle
+            isOpen={isMenuOpen}
+            onClick={() => setIsMenuOpen((open) => !open)}
+          />
+        </MobileNavHeader>
+
+        <MobileNavMenu isOpen={isMenuOpen}>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.link}
+              href={link.link}
+              className="w-full py-1 text-sm font-medium tracking-[0.16em] text-white/80 uppercase transition-colors hover:text-gold-300"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <Button className="mt-3 h-11 w-full text-xs font-semibold tracking-[0.14em] uppercase">
+            Solicitar Orçamento
+          </Button>
+        </MobileNavMenu>
+      </MobileNav>
+    </Navbar>
   );
 }

@@ -44,7 +44,7 @@ const SERVICES = [
   },
   {
     icon: FolderOpen,
-    title: "Apoio Administrativo",
+    title: "Perícia Contábil",
     description:
       "Serviços combinados de escritório e apoio administrativo para mais eficiência no dia a dia.",
   },

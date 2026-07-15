@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BrandLockup } from "@/components/brand-lockup";
 import { Button } from "@/components/ui/button";
 import {
   MobileNav,
@@ -18,22 +19,6 @@ const NAV_LINKS = [
   { name: "Conteúdo", link: "#conteudo" },
   { name: "Contato", link: "#contato" },
 ] as const;
-
-function BrandLockup() {
-  return (
-    <a href="#inicio" className="relative z-20 flex flex-col leading-none">
-      <span className="text-lg font-bold tracking-[0.22em] text-white">
-        PÁDUA
-      </span>
-      <span className="text-[0.6rem] font-medium tracking-[0.3em] text-gold-500">
-        CONTABILIDADE
-      </span>
-      <span className="mt-1 text-[0.5rem] font-normal tracking-[0.08em] text-white/50">
-        Auditoria e Consultoria Empresarial
-      </span>
-    </a>
-  );
-}
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

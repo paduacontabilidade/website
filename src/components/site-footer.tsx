@@ -94,10 +94,10 @@ export function SiteFooter() {
                   aria-hidden="true"
                 />
                 <a
-                  href="tel:+5565999717499"
+                  href="tel:+5565996810330"
                   className="transition-colors hover:text-gold-300"
                 >
-                  (65) 99971-7499
+                  (65) 99681-0330
                 </a>
               </li>
               <li className="flex gap-3">

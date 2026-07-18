@@ -58,8 +58,8 @@ export function ContactSection() {
               Vamos entender o que a sua empresa precisa?
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-white/70">
-              Preencha os dados ao lado. Ao enviar, uma conversa será aberta
-              no WhatsApp da Pádua com as informações organizadas.
+              Preencha os dados ao lado. Ao enviar, uma conversa será aberta no
+              WhatsApp da Pádua com as informações organizadas.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -80,10 +80,10 @@ export function ContactSection() {
                   E-mail
                 </p>
                 <a
-                  href="mailto:padua@paduacontabil.com.br"
+                  href="mailto:contato@paduacontabilidade.com.br"
                   className="mt-1 block text-white transition-colors hover:text-gold-300"
                 >
-                  padua@paduacontabil.com.br
+                  contato@paduacontabilidade.com.br
                 </a>
               </div>
 

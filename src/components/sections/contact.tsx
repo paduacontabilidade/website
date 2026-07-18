@@ -23,13 +23,26 @@ export function ContactSection() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const lines = [
-      `Olá! Meu nome é ${nome}.`,
-      empresa && `Empresa: ${empresa}`,
-      servico && `Serviço de interesse: ${servico}`,
-    ].filter(Boolean);
+    let message = `Olá! Meu nome é ${nome} e gostaria de conversar com a Pádua Contabilidade.`;
 
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+    const details = [
+      empresa && `minha empresa se chama ${empresa}`,
+      servico && `tenho interesse no serviço de ${servico}`,
+    ].filter((detail): detail is string => Boolean(detail));
+
+    if (details.length > 0) {
+      const sentence = details.join(" e ");
+      message += ` ${sentence.charAt(0).toUpperCase()}${sentence.slice(1)}.`;
+    }
+
+    const params = new URLSearchParams({
+      phone: WHATSAPP_NUMBER,
+      text: message,
+      type: "phone_number",
+      app_absent: "0",
+    });
+
+    const url = `https://api.whatsapp.com/send/?${params.toString()}`;
     window.open(url, "_blank", "noopener,noreferrer");
   }
 

@@ -4,6 +4,7 @@ import { ServicesSection } from "@/components/sections/services";
 import { ConsultingHighlight } from "@/components/sections/consulting-highlight";
 import { MethodologySection } from "@/components/sections/methodology";
 import { AboutSection } from "@/components/sections/about";
+import { ContactSection } from "@/components/sections/contact";
 import { SiteFooter } from "@/components/site-footer";
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
         <ConsultingHighlight />
         <MethodologySection />
         <AboutSection />
+        <ContactSection />
       </main>
       <SiteFooter />
     </>

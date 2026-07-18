@@ -22,13 +22,13 @@ type StatProps = {
 function Stat({ icon: Icon, value, label }: StatProps) {
   return (
     <div className="flex flex-col gap-2">
-      <span className="flex size-10 items-center justify-center rounded-lg border border-gold-500/30 bg-gold-500/10 text-gold-500">
+      <span className="flex size-10 items-center justify-center rounded-lg border border-gold-500/30 bg-gold-500/10 text-gold-600">
         <Icon className="size-5" strokeWidth={1.5} />
       </span>
-      <span className="text-lg leading-tight font-bold text-white">
+      <span className="text-lg leading-tight font-bold text-foreground">
         {value}
       </span>
-      <span className="text-xs leading-snug font-normal text-white/60">
+      <span className="text-xs leading-snug font-normal text-muted-foreground">
         {label}
       </span>
     </div>
@@ -37,10 +37,10 @@ function Stat({ icon: Icon, value, label }: StatProps) {
 
 export function AboutSection() {
   return (
-    <section id="quem-somos" className="bg-ink py-20 sm:py-28">
+    <section id="quem-somos" className="bg-secondary py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="relative overflow-hidden rounded-2xl ring-1 ring-white/10">
+          <div className="relative overflow-hidden rounded-2xl ring-1 ring-foreground/10">
             {/* Placeholder: substituir por foto própria da seção (sala de reunião) */}
             <img
               src="/backgrounds/hero-desktop.png"
@@ -51,14 +51,14 @@ export function AboutSection() {
           </div>
 
           <div>
-            <p className="text-xs font-medium tracking-[0.28em] text-gold-500 uppercase">
+            <p className="text-xs font-medium tracking-[0.28em] text-gold-600 uppercase">
               Quem Somos
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               Excelência, compromisso e confiança desde 2010.
             </h2>
 
-            <div className="mt-6 hidden space-y-4 text-base leading-relaxed text-white/70 md:block">
+            <div className="mt-6 hidden space-y-4 text-base leading-relaxed text-muted-foreground md:block">
               <p>
                 A Pádua Contabilidade LTDA foi fundada em 20 de setembro de
                 2010 com o propósito de oferecer soluções contábeis e

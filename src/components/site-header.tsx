@@ -28,7 +28,11 @@ export function SiteHeader() {
       <NavBody>
         <BrandLockup />
         <NavItems items={NAV_LINKS} />
-        <Button className="relative z-20 h-10 px-5 text-xs font-semibold tracking-[0.14em] uppercase">
+        <Button
+          render={<a href="#contato" />}
+          nativeButton={false}
+          className="relative z-20 h-10 px-5 text-xs font-semibold tracking-[0.14em] uppercase"
+        >
           Solicitar Orçamento
         </Button>
       </NavBody>
@@ -53,7 +57,11 @@ export function SiteHeader() {
               {link.name}
             </a>
           ))}
-          <Button className="mt-3 h-11 w-full text-xs font-semibold tracking-[0.14em] uppercase">
+          <Button
+            render={<a href="#contato" onClick={() => setIsMenuOpen(false)} />}
+            nativeButton={false}
+            className="mt-3 h-11 w-full text-xs font-semibold tracking-[0.14em] uppercase"
+          >
             Solicitar Orçamento
           </Button>
         </MobileNavMenu>

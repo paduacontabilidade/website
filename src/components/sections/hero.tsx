@@ -49,10 +49,16 @@ export function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button className="h-12 px-7 text-xs font-semibold tracking-[0.14em] uppercase">
+            <Button
+              render={<a href="#contato" />}
+              nativeButton={false}
+              className="h-12 px-7 text-xs font-semibold tracking-[0.14em] uppercase"
+            >
               Solicitar Orçamento
             </Button>
             <Button
+              render={<a href="#contato" />}
+              nativeButton={false}
               variant="outline"
               className="h-12 gap-2.5 border-white/25 bg-white/5 px-7 text-xs font-semibold tracking-[0.14em] text-white uppercase hover:bg-white/10 hover:text-white"
             >

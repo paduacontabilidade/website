@@ -22,7 +22,7 @@ export function ConsultingHighlight() {
             </p>
 
             <a
-              href="#"
+              href="#contato"
               className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] text-gold-500 uppercase transition-colors hover:text-gold-300"
             >
               Conhecer a Consultoria

@@ -81,7 +81,7 @@ function ServiceCard({ icon: Icon, title, description }: ServiceCardProps) {
         </p>
 
         <a
-          href="#"
+          href="#contato"
           className="hidden items-center gap-1.5 text-sm font-medium text-gold-600 transition-colors hover:text-gold-700 md:mt-auto md:inline-flex md:pt-5"
         >
           Saiba mais

@@ -1,25 +1,23 @@
+import { BrowserRouter, Navigate, Route, Routes } from "react-router";
 import { SiteHeader } from "@/components/site-header";
-import { Hero } from "@/components/sections/hero";
-import { ServicesSection } from "@/components/sections/services";
-import { ConsultingHighlight } from "@/components/sections/consulting-highlight";
-import { MethodologySection } from "@/components/sections/methodology";
-import { AboutSection } from "@/components/sections/about";
-import { ContactSection } from "@/components/sections/contact";
 import { SiteFooter } from "@/components/site-footer";
+import { ScrollToHash } from "@/components/scroll-to-hash";
+import { HomePage } from "@/pages/home-page";
+import { SolutionPage } from "@/pages/solution-page";
 
 export function App() {
   return (
-    <>
+    <BrowserRouter>
+      <ScrollToHash />
       <SiteHeader />
       <main>
-        <Hero />
-        <ServicesSection />
-        <ConsultingHighlight />
-        <MethodologySection />
-        <AboutSection />
-        <ContactSection />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/solucoes/:slug" element={<SolutionPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
       <SiteFooter />
-    </>
+    </BrowserRouter>
   );
 }

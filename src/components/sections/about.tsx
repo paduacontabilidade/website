@@ -8,9 +8,13 @@ import {
 
 const STATS = [
   { icon: Award, value: "+15", label: "Anos de experiência" },
-  { icon: Building2, value: "500+", label: "Empresas atendidas" },
+  { icon: Building2, value: "200+", label: "Empresas atendidas" },
   { icon: Briefcase, value: "Diversos", label: "Segmentos atendidos" },
-  { icon: CalendarCheck, value: "Compromisso", label: "Com prazos e resultados" },
+  {
+    icon: CalendarCheck,
+    value: "Compromisso",
+    label: "Com prazos e resultados",
+  },
 ] as const;
 
 type StatProps = {
@@ -60,14 +64,14 @@ export function AboutSection() {
 
             <div className="mt-6 hidden space-y-4 text-base leading-relaxed text-muted-foreground md:block">
               <p>
-                A Pádua Contabilidade LTDA foi fundada em 20 de setembro de
-                2010 com o propósito de oferecer soluções contábeis e
-                empresariais com qualidade, ética e responsabilidade.
+                A Pádua Contabilidade LTDA foi fundada em 20 de setembro de 2010
+                com o propósito de oferecer soluções contábeis e empresariais
+                com qualidade, ética e responsabilidade.
               </p>
               <p>
                 Ao longo destes anos, construímos uma história baseada em
-                relacionamentos sólidos, atendimento personalizado e
-                resultados que fazem a diferença para nossos clientes.
+                relacionamentos sólidos, atendimento personalizado e resultados
+                que fazem a diferença para nossos clientes.
               </p>
             </div>
 

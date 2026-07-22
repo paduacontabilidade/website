@@ -1,16 +1,12 @@
 import { useState, type FormEvent } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SOLUTIONS } from "@/data/solutions";
 
 const SERVICE_OPTIONS = [
-  "Contabilidade Empresarial",
-  "Consultoria Empresarial",
-  "Planejamento Tributário",
-  "Auditoria Contábil",
-  "Departamento Pessoal",
-  "Perícias Contábeis",
+  ...SOLUTIONS.map((solution) => solution.shortTitle),
   "Outro assunto",
-] as const;
+];
 
 const WHATSAPP_NUMBER = "5565996810330";
 

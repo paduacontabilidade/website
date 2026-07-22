@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
 export function ConsultingHighlight() {
   return (
@@ -21,13 +22,13 @@ export function ConsultingHighlight() {
               compreender a situação do negócio e definir prioridades.
             </p>
 
-            <a
-              href="#contato"
+            <Link
+              to="/solucoes/consultoria-empresarial"
               className="mt-6 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] text-gold-500 uppercase transition-colors hover:text-gold-300"
             >
               Conhecer a Consultoria
               <ArrowRight className="size-4" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

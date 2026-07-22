@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import { BrandLockup } from "@/components/brand-lockup";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,12 +13,12 @@ import {
 } from "@/components/ui/resizable-navbar";
 
 const NAV_LINKS = [
-  { name: "Início", link: "#inicio" },
-  { name: "Quem Somos", link: "#quem-somos" },
-  { name: "Serviços", link: "#servicos" },
-  { name: "Diferenciais", link: "#diferenciais" },
-  { name: "Conteúdo", link: "#conteudo" },
-  { name: "Contato", link: "#contato" },
+  { name: "Início", link: "/#inicio" },
+  { name: "Quem Somos", link: "/#quem-somos" },
+  { name: "Serviços", link: "/#servicos" },
+  { name: "Diferenciais", link: "/#diferenciais" },
+  { name: "Conteúdo", link: "/#conteudo" },
+  { name: "Contato", link: "/#contato" },
 ] as const;
 
 export function SiteHeader() {
@@ -29,7 +30,7 @@ export function SiteHeader() {
         <BrandLockup />
         <NavItems items={NAV_LINKS} />
         <Button
-          render={<a href="#contato" />}
+          render={<Link to="/#contato" />}
           nativeButton={false}
           className="relative z-20 h-10 px-5 text-xs font-semibold tracking-[0.14em] uppercase"
         >
@@ -48,17 +49,19 @@ export function SiteHeader() {
 
         <MobileNavMenu isOpen={isMenuOpen}>
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.link}
-              href={link.link}
+              to={link.link}
               className="w-full py-1 text-sm font-medium tracking-[0.16em] text-white/80 uppercase transition-colors hover:text-gold-300"
               onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <Button
-            render={<a href="#contato" onClick={() => setIsMenuOpen(false)} />}
+            render={
+              <Link to="/#contato" onClick={() => setIsMenuOpen(false)} />
+            }
             nativeButton={false}
             className="mt-3 h-11 w-full text-xs font-semibold tracking-[0.14em] uppercase"
           >

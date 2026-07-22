@@ -1,21 +1,14 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router";
 import { BrandLockup } from "@/components/brand-lockup";
+import { SOLUTIONS } from "@/data/solutions";
 
 const QUICK_LINKS = [
-  { label: "Início", href: "#inicio" },
-  { label: "Quem Somos", href: "#quem-somos" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Conteúdo", href: "#conteudo" },
-  { label: "Contato", href: "#contato" },
-] as const;
-
-const SERVICE_LINKS = [
-  "Contabilidade",
-  "Consultoria Empresarial",
-  "Auditoria Contábil",
-  "Consultoria Tributária",
-  "Departamento Pessoal",
-  "Apoio Administrativo",
+  { label: "Início", href: "/#inicio" },
+  { label: "Quem Somos", href: "/#quem-somos" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Conteúdo", href: "/#conteudo" },
+  { label: "Contato", href: "/#contato" },
 ] as const;
 
 const LEGAL_LINKS = [
@@ -49,12 +42,12 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-3">
               {QUICK_LINKS.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-sm text-white/60 transition-colors hover:text-gold-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -63,14 +56,14 @@ export function SiteFooter() {
           <nav aria-label="Serviços">
             <FooterHeading>Serviços</FooterHeading>
             <ul className="mt-5 space-y-3">
-              {SERVICE_LINKS.map((service) => (
-                <li key={service}>
-                  <a
-                    href="#servicos"
+              {SOLUTIONS.map((solution) => (
+                <li key={solution.slug}>
+                  <Link
+                    to={`/solucoes/${solution.slug}`}
                     className="text-sm text-white/60 transition-colors hover:text-gold-300"
                   >
-                    {service}
-                  </a>
+                    {solution.shortTitle}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -106,10 +99,10 @@ export function SiteFooter() {
                   aria-hidden="true"
                 />
                 <a
-                  href="mailto:contato@paduacontabilidade.com.br"
+                  href="mailto:padua@paduacontabil.com.br"
                   className="transition-colors hover:text-gold-300"
                 >
-                  contato@paduacontabilidade.com.br
+                  padua@paduacontabil.com.br
                 </a>
               </li>
             </ul>

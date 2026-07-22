@@ -1,8 +1,9 @@
+import { Link } from "react-router";
 import { cn } from "@/lib/utils";
 
 export function BrandLockup({ className }: { className?: string }) {
   return (
-    <a href="#inicio" className={cn("flex items-center gap-3", className)}>
+    <Link to="/#inicio" className={cn("flex items-center gap-3", className)}>
       <img src="/padua-icon.svg" alt="" className="size-14 shrink-0" />
       <span className="flex flex-col leading-none">
         <span className="text-lg font-bold tracking-[0.22em] text-white">
@@ -15,6 +16,6 @@ export function BrandLockup({ className }: { className?: string }) {
           Auditoria e Consultoria Empresarial
         </span>
       </span>
-    </a>
+    </Link>
   );
 }

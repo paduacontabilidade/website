@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
@@ -37,7 +38,7 @@ export function Hero() {
 
           <div className="mt-10">
             <Button
-              render={<a href="#contato" />}
+              render={<Link to="/#contato" />}
               nativeButton={false}
               className="h-12 px-7 text-xs font-semibold tracking-[0.14em] uppercase"
             >

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 export function BrandLockup({ className }: { className?: string }) {
   return (
     <Link to="/#inicio" className={cn("flex items-center gap-3", className)}>
-      <img src="/padua-icon.svg" alt="" className="size-14 shrink-0" />
+      <img src="/logo-padua.png" alt="" className="size-14 shrink-0" />
       <span className="flex flex-col leading-none">
         <span className="text-lg font-bold tracking-[0.22em] text-white">
           PÁDUA

@@ -76,10 +76,10 @@ export function ContactSection() {
                   E-mail
                 </p>
                 <a
-                  href="mailto:contato@paduacontabilidade.com.br"
+                  href="mailto:padua@paduacontabil.com.br"
                   className="mt-1 block text-white transition-colors hover:text-gold-300"
                 >
-                  contato@paduacontabilidade.com.br
+                  padua@paduacontabil.com.br
                 </a>
               </div>
 
